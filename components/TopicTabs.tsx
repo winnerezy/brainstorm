@@ -11,12 +11,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Flame, Highlighter, Star } from "lucide-react";
-import { Topic } from "./Topic";
+import { Topic } from "./Topics";
 
 export function TopicTabs() {
   return (
-    <Tabs defaultValue="account" className="w-[500px]">
-      <TabsList className="grid w-full grid-cols-3">
+    <Tabs defaultValue="new" className="max-w-[500px] w-full">
+      <TabsList className="grid grid-cols-3 max-w-[500px] w-full">
         <TabsTrigger value="popular" className="flex items-center gap-2">
           <Star />
           <p>Popular</p>
@@ -30,25 +30,25 @@ export function TopicTabs() {
           <p>Hot</p>
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="popular" className="flex flex-col gap-4">
+      <TabsContent value="popular" className="flex flex-col gap-4 max-w-[500px] w-full">
         {Array(3)
           .fill(null)
           .map((_, i) => (
-            <Topic />
+            <Topic key={i}/>
           ))}
       </TabsContent>
       <TabsContent value="new" className="flex flex-col gap-4">
         {Array(3)
           .fill(null)
           .map((_, i) => (
-            <Topic />
+            <Topic key={i}/>
           ))}
       </TabsContent>
       <TabsContent value="hot" className="flex flex-col gap-4">
         {Array(3)
           .fill(null)
           .map((_, i) => (
-            <Topic />
+            <Topic key={i}/>
           ))}
       </TabsContent>
     </Tabs>

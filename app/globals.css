@@ -4,14 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #ffffff;
     --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
+    --card: #ffffff;
+    --light-blue: #c1d6fd;
+    --accent-border: #bcbcbc;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover-foreground: #010e20;
+    --primary: #1662f8;
+    --primary-foreground: #0b0b0f;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
@@ -20,8 +22,8 @@
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: #bdc4ef;
+    --input: #dee1f3;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
@@ -32,14 +34,15 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: #0b0c14;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
+    --light-blue: #02173e;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: #e1edfe;
+    --primary: #0752e9;
+    --primary-foreground: #f0f0f4;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
@@ -48,7 +51,7 @@
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
+    --border: #2e071a;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
     --chart-1: 220 70% 50%;
@@ -64,7 +67,7 @@
     @apply border-border;
   }
   body {
-    @apply  bg-gradient-to-tl from-green-200 via-yellow-100 to-purple-600;
-    @apply text-white;
+    @apply bg-[--background];
+    @apply text-[#010e20] dark:text-[#e1edfe];
   }
 }
