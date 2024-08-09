@@ -1,9 +1,15 @@
-import { type NextRequest } from 'next/server'
-import { updateSession } from '@/utils/supabase/middleware'
+import { auth } from "@/auth"
+import { NextResponse } from "next/server"
 
-export async function middleware(request: NextRequest) {
-  return await updateSession(request)
-}
+export default auth((req) =>{
+
+  const protectedRoute = ['/home', '/my-posts', '/create-posts']
+  
+  if(!req.auth && protectedRoute.includes(req.nextUrl.pathname)){
+    return NextResponse.redirect(new URL('/sign-in', req.nextUrl.origin))
+  }
+  return NextResponse.next()
+})
 
 export const config = {
   matcher: [

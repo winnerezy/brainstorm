@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.4.2",
+    "@prisma/client": "^5.18.0",
     "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-dropdown-menu": "^2.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@supabase/ssr": "^0.4.0",
-    "@supabase/supabase-js": "^2.45.0",
+    "@types/next-auth": "^3.15.0",
     "brainstorm": "file:",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -24,18 +27,21 @@
     "framer-motion": "^11.3.21",
     "lucide-react": "^0.424.0",
     "next": "14.2.5",
+    "next-auth": "^5.0.0-beta.20",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-redux": "^9.1.2",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
+    "prisma": "5.16.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

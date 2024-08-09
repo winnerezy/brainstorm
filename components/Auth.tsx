@@ -6,7 +6,7 @@ import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
-import { handleSignIn } from "@/app/actions/actions";
+import { handleSignIn } from "../lib/actions";
 
 export const Auth = ({ name }: { name: string }) => {
 
@@ -36,11 +36,11 @@ export const Auth = ({ name }: { name: string }) => {
           <hr className="h-2 w-full" />
         </div>
         <section className="flex flex-col gap-4 w-full  self-center">
-          <Button className="flex items-center gap-3 bg-white "  onClick={async () => await handleSignIn("google")}>
+          <Button className="flex items-center gap-3 bg-transparent border border-border"  onClick={async () => await handleSignIn("google")}>
             <FcGoogle size={25} />
             <p>Sign In With Google</p>
           </Button>
-          <Button className="flex items-center gap-3 bg-white" onClick={async () => await handleSignIn("github")}>
+          <Button className="flex items-center gap-3 bg-transparent border border-border" onClick={async () => await handleSignIn("github")}>
             <FaGithub size={25} />
             <p>Sign In With Github</p>
           </Button>
@@ -50,7 +50,7 @@ export const Auth = ({ name }: { name: string }) => {
      
     </section>
      <section className="w-full min-h-screen border-4 sticky hidden xl:flex items-center justify-center">
-    <h2 className="text-4xl">  Brainstorm</h2>
+    <h2 className="text-4xl">Brainstorm</h2>
      </section>
    </div>
   );

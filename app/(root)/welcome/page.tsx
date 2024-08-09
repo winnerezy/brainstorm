@@ -6,8 +6,8 @@ import Link from "next/link";
 export default function Welcome() {
   return (
     <section className="flex flex-col items-center gap-16">
-      <div className="max-w-7xl w-full flex flex-col items-center gap-16 m-auto">
-        <div className="flex flex-col w-full gap-6 items-center mt-10">
+      <div className="max-w-7xl w-full flex flex-col items-center gap-16 mx-auto">
+        <div className="flex flex-col w-full  gap-6 items-center justify-center mt-36 px-8">
           <h3 className="font-[800] text-4xl md:text-5xl lg:text-6xl tracking-wide w-full max-w-[800px] text-center leading-[40px] ">
             Find A Topic And Talk About It!
           </h3>
@@ -17,21 +17,21 @@ export default function Welcome() {
           </p>
         </div>
         <Link
-          href={"/home"}
-          className={buttonVariants({ className: "w-36 h-12 space-x-2" })}
+          href={"/sign-in"}
+          className={buttonVariants({ className: "w-36 h-12 space-x-2 text-white" })}
         >
           <p>Join Us</p>
           <ArrowRightIcon />
         </Link>
-      <div className="w-full flex flex-col gap-6 h-[600px]">
+      <div className="w-full flex flex-col gap-6 h-[600px] px-8">
         <h4 className="text-3xl font-[400] text-center underline">Make your own stories</h4>
-        <div className="w-full h-full max-h-[60vh] border border-[--border]">
+        <div className="w-full h-full max-h-[60vh] border border-border">
 
         </div>
       </div>
-      <div className="w-full flex flex-col gap-6 h-[600px]">
+      <div className="w-full flex flex-col gap-6 h-[600px] px-8">
         <h4 className="text-3xl font-[400] text-center underline">Find Latest Trends</h4>
-        <div className="w-full h-full max-h-[60vh] border border-[--border]">
+        <div className="w-full h-full max-h-[60vh] border border-border">
 
         </div>
       </div>
